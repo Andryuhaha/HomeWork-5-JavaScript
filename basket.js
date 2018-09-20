@@ -1,6 +1,7 @@
 'use strict';
 
 var contentBasket = document.getElementById("basketID");
+var countBasket = document.getElementById("basketIDCount");
 var count;
 var sum;
 	
@@ -29,6 +30,9 @@ if (sum !=0) {
 function countAmountItems(bsk) {
 	var count = 0;
 	for (var i = 0; i<bsk.length; i++) {
-		count = count + bsk[i].id
-	}
+		count = count + bsk[i].id;
+	} return count;
 }
+
+count = countAmountItems(basket);
+countBasket.innerHTML = "Количество товаров в корзине: " + count;
